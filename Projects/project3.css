@@ -1,0 +1,763 @@
+div {
+  background: black;
+  border-radius: 1rem;
+  position: relative;
+  width: 1rem;
+}
+.box {
+  background: none;
+  border-bottom: .2rem solid black;
+  border-radius: 0;
+  height: 16rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 20rem;
+}
+.controls {
+  background: none;
+  bottom: -4.5rem;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  button {
+    background: dodgerblue;
+    border: none;
+    border-bottom: .2rem solid darken(dodgerblue, 15%);
+    border-top: .2rem solid tint(dodgerblue, 15%);
+    border-radius: .2rem;
+    color: white;
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 3.5rem;
+    padding: 0 1.2rem;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    &.active {
+      background: deepskyblue;
+      border-bottom: .2rem solid darken(deepskyblue, 15%);
+      border-top: .2rem solid tint(deepskyblue, 15%);
+    }
+  }
+}
+
+.body {
+  height: 7rem;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  .head {
+    border-radius: 50%;
+    height: 3rem;
+    left: 50%;
+    position: absolute;
+    top: -3rem;
+    transform: translateX(-50%);
+    width: 3rem;
+  }
+  .arm {
+    height: 4.6rem;
+    position: absolute;
+    top: 0;
+    transform-origin: .5rem .5rem;
+    &:after {
+      background: black;
+      border-radius: 2rem;
+      content: "";
+      height: 4.6rem;
+      position: absolute;
+      top: 3.6rem;
+      transform-origin: .5rem .5rem;
+      width: 1rem;
+    }
+  }
+  .leg {
+    height: 5.6rem;
+    position: absolute;
+    top: 6rem;
+    transform-origin: .5rem .5rem;
+    &:after {
+      background: black;
+      border-radius: 2rem;
+      content: "";
+      height: 5.6rem;
+      position: absolute;
+      top: 4.6rem;
+      transform-origin: .5rem .5rem;
+      width: 1rem;
+    }
+  }
+}
+
+.body.walk {
+  animation: walkBody .5s ease-in-out infinite alternate;
+  .arm {
+    &.left {
+      animation: walkArmUpperLeft 1s linear infinite alternate;
+      &:after {
+        animation: walkArmLowerLeft 2s ease-in-out infinite;
+      }
+    }
+    &.right {
+      animation: walkArmUpperRight 1s linear infinite alternate;
+      &:after {
+        animation: walkArmLowerRight 2s ease-in-out infinite;
+      }
+    }
+  }
+  .leg {
+    &.left {
+      animation: walkLegUpperLeft 1s linear infinite alternate;
+      &:after {
+        animation: walkLegLowerLeft 2s ease-in-out infinite;
+      }
+    }
+    &.right {
+      animation: walkLegUpperRight 1s linear infinite alternate;
+      &:after {
+        animation: walkLegLowerRight 2s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+.body.run {
+  animation: runBody .15s ease-in-out infinite alternate;
+  transform: rotate(20deg) translateX(-50%);
+  .head {
+    left: 1rem;
+  }
+  .arm {
+    &.left {
+      animation: runArmUpperLeft .3s linear infinite alternate;
+      &:after {
+        animation: runArmLowerLeft .6s ease-in-out infinite;
+      }
+    }
+    &.right {
+      animation: runArmUpperRight .3s linear infinite alternate;
+      &:after {
+        animation: runArmLowerRight .6s ease-in-out infinite;
+      }
+    }
+  }
+  .leg {
+    &.left {
+      animation: runLegUpperLeft .3s linear infinite alternate;
+      &:after {
+        animation: runLegLowerLeft .6s ease-in-out infinite;
+      }
+    }
+    &.right {
+      animation: runLegUpperRight .3s linear infinite alternate;
+      &:after {
+        animation: runLegLowerRight .6s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+.body.ninja {
+  animation: ninjaBody .15s ease-in-out infinite alternate;
+  top: 5rem;
+  transform: rotate(60deg) translateX(-50%);
+  &,
+  div {
+    background: black;
+    &:after {
+      background: black;
+    }
+  }
+  .head {
+    left: 50%;
+    transform: rotate(-50deg) translateX(-50%) translateY(-50%);
+    &:before {
+      background: tomato;
+      border-radius: .5rem .5rem 0 0 / 1.1rem 1.1rem 0 0;
+      content: "";
+      height: .7rem;
+      top: .6rem;
+      left: -.1rem;
+      position: absolute;
+      width: 3.2rem;
+    }
+    &:after {
+      animation: ninjaHeadband .2s linear infinite reverse;
+      background: tomato;
+      content: "";
+      border-radius: 50%;
+      height: .8rem;
+      left: -.8rem;
+      position: absolute;
+      top: .8rem;
+      width: .9rem;
+      overflow: shown;
+      z-index: 1;
+    }
+  }
+  .arm {
+    &.left {
+      animation: ninjaArmUpperLeft 1s linear infinite alternate;
+      &:after {
+        animation: ninjaArmLowerLeft 2s ease-in-out infinite;
+      }
+    }
+    &.right {
+      animation: ninjaArmUpperRight 1s linear infinite alternate;
+      &:after {
+        animation: ninjaArmLowerRight 2s ease-in-out infinite;
+      }
+    }
+  }
+  .leg {
+    &.left {
+      animation: ninjaLegUpperLeft .3s linear infinite;
+      &:after {
+        animation: ninjaLegLowerLeft .3s ease-in-out infinite;
+      }
+    }
+    &.right {
+      animation: ninjaLegUpperRight .3s linear infinite;
+      &:after {
+        animation: ninjaLegLowerRight .3s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+//**********************************************************
+//
+// start walking animations
+//
+//
+
+@keyframes walkBody {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-.3rem);
+  }
+}
+
+@keyframes walkLegUpperLeft {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+@keyframes walkLegUpperRight {
+  from {
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes walkLegLowerLeft {
+  0% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(50deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes walkLegLowerRight {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes walkArmUpperLeft {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+@keyframes walkArmUpperRight {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes walkArmLowerLeft {
+  0% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes walkArmLowerRight {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+//
+//
+// end walking animations
+//
+//**********************************************************
+
+//**********************************************************
+//
+// start running animations
+//
+//
+
+@keyframes runBody {
+  from {
+    transform: rotate(20deg) translateY(0);
+  }
+  to {
+    transform: rotate(20deg) translateY(-.3rem);
+  }
+}
+
+@keyframes runLegUpperLeft {
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(-100deg);
+  }
+}
+@keyframes runLegUpperRight {
+  from {
+    transform: rotate(-100deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes runLegLowerLeft {
+  0% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(100deg);
+  }
+  50% {
+    transform: rotate(100deg);
+  }
+  75% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes runLegLowerRight {
+  0% {
+    transform: rotate(100deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(100deg);
+  }
+  100% {
+    transform: rotate(100deg);
+  }
+}
+
+@keyframes runArmUpperLeft {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+@keyframes runArmUpperRight {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes runArmLowerLeft {
+  0% {
+    transform: rotate(-100deg);
+  }
+  25% {
+    transform: rotate(-110deg);
+  }
+  50% {
+    transform: rotate(-100deg);
+  }
+  100% {
+    transform: rotate(-100deg);
+  }
+}
+@keyframes runArmLowerRight {
+  0% {
+    transform: rotate(-100deg);
+  }
+  50% {
+    transform: rotate(-100deg);
+  }
+  75% {
+    transform: rotate(-110deg);
+  }
+  100% {
+    transform: rotate(-100deg);
+  }
+}
+
+//
+//
+// end running animations
+//
+//**********************************************************
+
+//**********************************************************
+//
+// start ninja animations
+//
+//
+
+@keyframes ninjaBody {
+  from {
+    transform: rotate(60deg) translateY(0);
+  }
+  to {
+    transform: rotate(60deg) translateY(-.3rem);
+  }
+}
+
+@keyframes ninjaLegUpperLeft {
+  0% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-140deg);
+  }
+  70% {
+    transform: rotate(-140deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+@keyframes ninjaLegUpperRight {
+  0% {
+    transform: rotate(-140deg);
+  }
+  20% {
+    transform: rotate(-140deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  70% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-140deg);
+  }
+}
+
+@keyframes ninjaLegLowerLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(100deg);
+  }
+  50% {
+    transform: rotate(155deg);
+  }
+  70% {
+    transform: rotate(155deg);
+  }
+  85% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes ninjaLegLowerRight {
+  0% {
+    transform: rotate(155deg);
+  }
+  20% {
+    transform: rotate(155deg);
+  }
+  35% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(100deg);
+  }
+  100% {
+    transform: rotate(155deg);
+  }
+}
+
+@keyframes ninjaArmUpperLeft {
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+@keyframes ninjaArmUpperRight {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes ninjaArmLowerLeft {
+  0% {
+    transform: rotate(-20deg);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+@keyframes ninjaArmLowerRight {
+  0% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes ninjaHeadband {
+  0% {
+    box-shadow: 
+     -0.5rem  0.1rem 0 0 tomato,
+     -1.0rem  0.3rem 0 0 tomato,
+     -1.5rem  0.6rem 0 0 tomato,
+     -2.0rem  0.8rem 0 0 tomato,
+     -2.5rem  0.9rem 0 0 tomato,
+     -3.0rem  0.8rem 0 0 tomato,
+     -3.5rem  0.6rem 0 0 tomato,
+     -4.0rem  0.3rem 0 0 tomato,
+     -4.5rem  0.1rem 0 0 tomato,
+     -5.0rem  0.0rem 0 0 tomato,
+
+     -0.5rem  0.1rem 0 0 darken(tomato, 10%),
+     -1.0rem  0.35rem 0 0 darken(tomato, 10%),
+     -1.5rem  0.7rem 0 0 darken(tomato, 10%),
+     -2.0rem  1.0rem 0 0 darken(tomato, 10%),
+     -2.5rem  1.2rem 0 0 darken(tomato, 10%),
+     -3.0rem  1.1rem 0 0 darken(tomato, 10%),
+     -3.5rem  1.0rem 0 0 darken(tomato, 10%),
+     -4.0rem  0.8rem 0 0 darken(tomato, 10%),
+     -4.5rem  0.7rem 0 0 darken(tomato, 10%),
+     -5.0rem  0.7rem 0 0 darken(tomato, 10%)
+    ;
+  }
+  20% {
+    box-shadow: 
+     -0.5rem  0.0rem 0 0 tomato,
+     -1.0rem  0.2rem 0 0 tomato,
+     -1.5rem  0.5rem 0 0 tomato,
+     -2.0rem  0.7rem 0 0 tomato,
+     -2.5rem  0.6rem 0 0 tomato,
+     -3.0rem  0.3rem 0 0 tomato,
+     -3.5rem  0.1rem 0 0 tomato,
+     -4.0rem  0.0rem 0 0 tomato,
+     -4.5rem  0.1rem 0 0 tomato,
+     -5.0rem  0.3rem 0 0 tomato,
+
+     -0.5rem  0.0rem 0 0 darken(tomato, 10%),
+     -1.0rem  0.25rem 0 0 darken(tomato, 10%),
+     -1.5rem  0.6rem 0 0 darken(tomato, 10%),
+     -2.0rem  0.9rem 0 0 darken(tomato, 10%),
+     -2.5rem  0.9rem 0 0 darken(tomato, 10%),
+     -3.0rem  0.7rem 0 0 darken(tomato, 10%),
+     -3.5rem  0.6rem 0 0 darken(tomato, 10%),
+     -4.0rem  0.6rem 0 0 darken(tomato, 10%),
+     -4.5rem  0.8rem 0 0 darken(tomato, 10%),
+     -5.0rem  1.1rem 0 0 darken(tomato, 10%)
+    ;
+  }
+  40% {
+    box-shadow: 
+     -0.5rem  0.1rem 0 0 tomato,
+     -1.0rem  0.3rem 0 0 tomato,
+     -1.5rem  0.4rem 0 0 tomato,
+     -2.0rem  0.3rem 0 0 tomato,
+     -2.5rem  0.1rem 0 0 tomato,
+     -3.0rem  0.0rem 0 0 tomato,
+     -3.5rem  0.1rem 0 0 tomato,
+     -4.0rem  0.3rem 0 0 tomato,
+     -4.5rem  0.6rem 0 0 tomato,
+     -5.0rem  0.8rem 0 0 tomato,
+
+     -0.5rem  0.1rem 0 0 darken(tomato, 10%),
+     -1.0rem  0.35rem 0 0 darken(tomato, 10%),
+     -1.5rem  0.5rem 0 0 darken(tomato, 10%),
+     -2.0rem  0.5rem 0 0 darken(tomato, 10%),
+     -2.5rem  0.4rem 0 0 darken(tomato, 10%),
+     -3.0rem  0.4rem 0 0 darken(tomato, 10%),
+     -3.5rem  0.6rem 0 0 darken(tomato, 10%),
+     -4.0rem  0.9rem 0 0 darken(tomato, 10%),
+     -4.5rem  1.3rem 0 0 darken(tomato, 10%),
+     -5.0rem  1.6rem 0 0 darken(tomato, 10%)
+    ;
+  }
+  60% {
+    box-shadow: 
+     -0.5rem  0.1rem 0 0 tomato,
+     -1.0rem  0.2rem 0 0 tomato,
+     -1.5rem  0.1rem 0 0 tomato,
+     -2.0rem  0.0rem 0 0 tomato,
+     -2.5rem  0.1rem 0 0 tomato,
+     -3.0rem  0.3rem 0 0 tomato,
+     -3.5rem  0.6rem 0 0 tomato,
+     -4.0rem  0.8rem 0 0 tomato,
+     -4.5rem  0.9rem 0 0 tomato,
+     -5.0rem  0.8rem 0 0 tomato,
+
+     -0.5rem  0.1rem 0 0 darken(tomato, 10%),
+     -1.0rem  0.25rem 0 0 darken(tomato, 10%),
+     -1.5rem  0.2rem 0 0 darken(tomato, 10%),
+     -2.0rem  0.3rem 0 0 darken(tomato, 10%),
+     -2.5rem  0.5rem 0 0 darken(tomato, 10%),
+     -3.0rem  0.8rem 0 0 darken(tomato, 10%),
+     -3.5rem  1.2rem 0 0 darken(tomato, 10%),
+     -4.0rem  1.4rem 0 0 darken(tomato, 10%),
+     -4.5rem  1.6rem 0 0 darken(tomato, 10%),
+     -5.0rem  1.6rem 0 0 darken(tomato, 10%)
+    ;
+  }
+  80% {
+    box-shadow: 
+     -0.5rem  0.1rem 0 0 tomato,
+     -1.0rem  0.0rem 0 0 tomato,
+     -1.5rem  0.1rem 0 0 tomato,
+     -2.0rem  0.3rem 0 0 tomato,
+     -2.5rem  0.6rem 0 0 tomato,
+     -3.0rem  0.8rem 0 0 tomato,
+     -3.5rem  0.9rem 0 0 tomato,
+     -4.0rem  0.8rem 0 0 tomato,
+     -4.5rem  0.6rem 0 0 tomato,
+     -5.0rem  0.3rem 0 0 tomato,
+
+     -0.5rem  0.1rem 0 0 darken(tomato, 10%),
+     -1.0rem  0.15rem 0 0 darken(tomato, 10%),
+     -1.5rem  0.2rem 0 0 darken(tomato, 10%),
+     -2.0rem  0.5rem 0 0 darken(tomato, 10%),
+     -2.5rem  0.9rem 0 0 darken(tomato, 10%),
+     -3.0rem  1.2rem 0 0 darken(tomato, 10%),
+     -3.5rem  1.4rem 0 0 darken(tomato, 10%),
+     -4.0rem  1.4rem 0 0 darken(tomato, 10%),
+     -4.5rem  1.3rem 0 0 darken(tomato, 10%),
+     -5.0rem  1.1rem 0 0 darken(tomato, 10%)
+    ;
+  }
+  100% {
+    box-shadow: 
+     -0.5rem  0.1rem 0 0 tomato,
+     -1.0rem  0.3rem 0 0 tomato,
+     -1.5rem  0.6rem 0 0 tomato,
+     -2.0rem  0.8rem 0 0 tomato,
+     -2.5rem  0.9rem 0 0 tomato,
+     -3.0rem  0.8rem 0 0 tomato,
+     -3.5rem  0.6rem 0 0 tomato,
+     -4.0rem  0.3rem 0 0 tomato,
+     -4.5rem  0.1rem 0 0 tomato,
+     -5.0rem  0.0rem 0 0 tomato,
+
+     -0.5rem  0.1rem 0 0 darken(tomato, 10%),
+     -1.0rem  0.35rem 0 0 darken(tomato, 10%),
+     -1.5rem  0.7rem 0 0 darken(tomato, 10%),
+     -2.0rem  1.0rem 0 0 darken(tomato, 10%),
+     -2.5rem  1.2rem 0 0 darken(tomato, 10%),
+     -3.0rem  1.1rem 0 0 darken(tomato, 10%),
+     -3.5rem  1.0rem 0 0 darken(tomato, 10%),
+     -4.0rem  0.8rem 0 0 darken(tomato, 10%),
+     -4.5rem  0.7rem 0 0 darken(tomato, 10%),
+     -5.0rem  0.7rem 0 0 darken(tomato, 10%)
+    ;
+  }
+}
+
+//
+//
+// end ninja animations
+//
+//**********************************************************

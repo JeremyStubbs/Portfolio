@@ -1,0 +1,26 @@
+body {
+	margin: 10px;
+}
+
+p {
+	position: relative;
+	margin: 10px;
+}
+
+button {
+	position: relative;
+	margin: 10px;
+}
+
+input {
+	margin: 10px;
+}
+
+div {
+	margin: 10px;
+    height: 100px;
+}
+
+ul {
+	margin: 10px;
+}
