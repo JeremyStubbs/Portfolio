@@ -1,4 +1,5 @@
 //All this is only here for reference
+//To do list
 const addtodo = function (event) {
 	event.preventDefault();
 	let input = $('#input').val();
@@ -7,6 +8,7 @@ const addtodo = function (event) {
 
 $('#submit').click(addtodo);
 
+//API call and demonstration of async await
 const loadData = async () => {
 	try {
 		const url = 'https://dog.ceo/api/breeds/list/all';
