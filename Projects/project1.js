@@ -146,6 +146,7 @@ $('#stop').click(function () {
 });
 
 
+//The following code for creating a draggable div was adopted from and answer on https://stackoverflow.com/questions/66642650/prevent-draggable-div-from-leaving-container-div-while-dragging
 
 dragElement(document.getElementById('topwrapper'));
 
