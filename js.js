@@ -1,3 +1,4 @@
+//Code for since birth clock
 const birthdate = new Date('October 11, 2021 12:00:00');
 
 const timer = (event) => {
@@ -28,6 +29,7 @@ $(document).ready(function () {
 	timer();
 });
 
+//Code for weather API. Much more difficult than openweather api
 $('#addresssubmit').click(function () {
 	let address = $('#address').val();
 	console.log(address);
@@ -73,25 +75,3 @@ const getWeather = async (element) => {
 		console.error(err);
 	}
 };
-
-
-// let width = $('body');
-// $('#secondimg').css('width', width/5);
-// $('#secondimg').css('height', width/5);
-
-// $('#dropdown-content1').click(function (event) {
-// 	event.preventDefault();
-// 	let n = $('#project1').offset().top;
-// 	$('html, body').animate({ scrollTop: n }, 1000);
-// });
-
-// $(window).unload(function () {
-// 	$.cookie('scrollTop', $(window).scrollTop());
-// });
-
-// function redirect() {
-// 	window.location.href = 'http://www.espn.com';
-// 	return false;
-// }
-
-// $('#dropdown-content1').click(redirect);
