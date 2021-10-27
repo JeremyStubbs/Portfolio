@@ -1,3 +1,5 @@
+//Source: https://api.jquery.com/animate/
+
 $('#right').click(function () {
 	$('.wrapper').animate({ left: '+=50px' }, 'slow');
 });
