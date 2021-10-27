@@ -1,4 +1,4 @@
-//Source: https://api.jquery.com/animate/
+//Code for button animations. Source: https://api.jquery.com/animate/
 
 $('#right').click(function () {
 	$('.wrapper').animate({ left: '+=50px' }, 'slow');
@@ -16,8 +16,7 @@ $('#down').click(function () {
 	$('.wrapper').animate({ top: '+=50px' }, 'slow');
 });
 
-
-//Source: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
+//Code for key press events. Source: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
 
 window.addEventListener(
 	'keydown',
@@ -59,8 +58,7 @@ window.addEventListener(
 	true
 );
 
-///* Stickman js from https://codepen.io/lorayoconnell/pen/pyayOP 
-
+///Code for button animations. Stickman js from https://codepen.io/lorayoconnell/pen/pyayOP
 
 const dance = () => {
 	$('.head').css('animation', 'rock 1s alternate infinite ease-in-out');
@@ -145,8 +143,7 @@ $('#stop').click(function () {
 	$('.rightfoot').css('transform-origin', '');
 });
 
-
-//The following code for creating a draggable div was adopted from and answer on https://stackoverflow.com/questions/66642650/prevent-draggable-div-from-leaving-container-div-while-dragging
+//The following code for creating a draggable div was adopted from an answer on https://stackoverflow.com/questions/66642650/prevent-draggable-div-from-leaving-container-div-while-dragging
 
 dragElement(document.getElementById('topwrapper'));
 
@@ -187,8 +184,7 @@ function dragElement(elmnt) {
 	}
 }
 
-
-//
+//The following code is the jquery solution for key press animations
 // $(document).keypress(function (event) {
 // 	alert('Handler for .keypress() called. - ' + event.charCode);
 // });
@@ -202,7 +198,7 @@ function dragElement(elmnt) {
 // 	}
 // });
 
-
+//The following code is the jquery solution for creating a draggable element
 // function handle_mousedown(e) {
 // 	window.my_dragging = {};
 // 	my_dragging.pageX0 = e.pageX;
@@ -220,7 +216,6 @@ function dragElement(elmnt) {
 // 	$('body').on('mouseup', handle_mouseup).on('mousemove', handle_dragging);
 // }
 // $('.wrapper').mousedown(handle_mousedown);
-
 
 // function handle_mousedown(e) {
 // 	window.my_dragging = {};
