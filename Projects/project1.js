@@ -59,6 +59,9 @@ window.addEventListener(
 	true
 );
 
+///* Stickman js from https://codepen.io/lorayoconnell/pen/pyayOP 
+
+
 const dance = () => {
 	$('.head').css('animation', 'rock 1s alternate infinite ease-in-out');
 	$('.head').css('transform-origin', 'center bottom');
