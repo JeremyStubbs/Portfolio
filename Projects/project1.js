@@ -184,7 +184,7 @@ function dragElement(elmnt) {
 	}
 }
 
-//The following code is the jquery solution for key press animations
+//The following code is the jquery solution for key press animations is from https://stackoverflow.com/questions/302122/jquery-event-keypress-which-key-was-pressed
 // $(document).keypress(function (event) {
 // 	alert('Handler for .keypress() called. - ' + event.charCode);
 // });
@@ -198,7 +198,7 @@ function dragElement(elmnt) {
 // 	}
 // });
 
-//The following code is the jquery solution for creating a draggable element
+//The following code is the jquery solution for creating a draggable element is from https://stackoverflow.com/questions/38405569/jquery-calling-function-to-parent-element
 // function handle_mousedown(e) {
 // 	window.my_dragging = {};
 // 	my_dragging.pageX0 = e.pageX;
