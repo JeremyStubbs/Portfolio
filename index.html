@@ -8,123 +8,140 @@
     <link rel='stylesheet' href='main.css' />
     <title>Jeremy Stubbs</title>
 </head>
-
+<header id='header'>
+    Jeremy's Portfolio
+</header>
 <body>
-    <header id='header'>
-        Jeremy's Portfolio
-    </header>
-    <div id='navbar'> 
-        <div id='navbar1wrapper'>
-            <a href="#" class='btndiv1'>
-                Javascript Projects
-            </a>
-            <div id='dropdown-content1'>
-                <section><a class="navLink" href="#project1" class="smoothScroll">Dancing Game</a></section>
-                <section><a class="navLink" href="#project2" class="smoothScroll">Cool API</a></section>
-                <section><a class="navLink" href="#project3" class="smoothScroll">Under Development</a></section>
+    <div id='hamburger' >
+        <div id='hamburger-lines' onclick="myFunction1()">
+            <div id='one'></div>
+            <div id='two'></div>
+            <div id='three'></div>
+        </div>
+        <div id='hamburger-content'>
+            <div id='first' onclick="scrollPageTo('info')">About Me
+                <!-- <div id='first-content'>
+                    <div id=''>Drama</div>
+                    <div id=''>Horror</div>
+                    <div id=''>Romance</div>
+                </div> -->
+            </div>                
+            <div id='second' onclick="myFunction3()">My Projects
+                <div id ='second-content'>
+                    <div onclick="scrollPageTo('project1')">Javascript Game</div>
+                    <div onclick="scrollPageTo('project2')">Spotify Clone</div>
+                    <div onclick="scrollPageTo('project3')">Something Else</div>
+                </div>
+            </div>                
+            <div id='third' onclick="scrollPageTo('footer')">Contact
+                <!-- <div id='third-content'>
+                    <div id=''>Adventure</div>
+                    <div id=''>Fantasy</div>
+                    <div id=''>Young Adults</div>
+                </div> -->
             </div>
         </div>
+        <div id='hamburger-search'>
+            <input id='hamburger-search-field' type='text' placeholder='Search'  />
+            <div>
+                <img id='hamburger-search-image' src='img/search.png' onclick="searchFunction()"/>
+            </div>
+        </div>
+    </div>
+    
+    <div id='navbar'>
+        <div id='navbar1wrapper'>
+            <div onclick="scrollPageTo('info')">About Me</div>
+            <!-- <div id='dropdown-content1'>
+                <div >
+                    <div>Drama</div>
+                </div>
+                <div >
+                    <div>Horror</div>
+                </div>
+                <div >
+                    <div>Romance</div>
+                </div>
+            </div> -->
+        </div>
         <div id='navbar2wrapper'>
-            <a href="#" class='btndiv2'>
-                Python Projects
-            </a>
+            My Projects
             <div id='dropdown-content2'>
-                <section>Under Development</section>
-                <section>Under Development</section>
-                <section>Under Development</section>
-                <section>Under Development</section>
+                <div onclick="scrollPageTo('project1')">Javascript Game</div>
+                <div onclick="scrollPageTo('project2')">Spotify Clone</div>
+                <div onclick="scrollPageTo('project3')">Something Else</div>
             </div>
         </div>
         <div id='navbar3wrapper'>
-            <a href="#" class='btndiv3'>
-                Full Stack Websites
-            </a>
-            <div id='dropdown-content3'>
-                <section>Under Development</section>
-                <section>Under Development</section>
-                <section>Under Development</section>
-                <section>Under Development</section>
-            </div>
-        </div>
-        <div id='navbar4wrapper'>
-            <a class="navLink1" href="#footer1" class="smoothScroll">Contact</a>
-            <!-- <div id='dropdown-content4'>
-                <section>Email</section>
-                <section><img src=''>Linkedin</section>
+            <div onclick="scrollPageTo('footer')">Contact</div>
+            <!-- <div id='dropdown-content3'>
+                <div >
+                    <div>Adventure</div>
+                </div>
+                <div >
+                    <div>Fantasy</div>
+                </div>
+                <div >
+                    <div>Young Adults</div>
+                </div>
             </div> -->
         </div>
-        <div class='searchdiv'>
-            <form class='form' action="http://www.espn.com">
-                <input class='search-field' type="text" placeholder="Go to espn.com" />
-                <button class='search-button' type="submit">
-                    <img class='search-image' src="search.png"></button>
-            </form>
+        <div id='search-div'>
+            <input id='search-field' type='text' placeholder='Search'
+            />
+            <img id='search-image' src='img/search.png' onclick="searchFunction()"/>
         </div>
-    </div>
-    <div id='info'>
-        <img id='secondimg'
-            src='https://helios-i.mashable.com/imagery/articles/05ElPORGsTSd8oy9kN1xvJY/hero-image.fill.size_1200x675.v1629141910.jpg'>
-        Some stuff about me Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis nulla augue. Aenean vitae luctus dui. Maecenas
-        vestibulum sapien tortor, non luctus massa lacinia eu. Ut lobortis elit id augue accumsan, quis imperdiet arcu interdum.
-        Duis et orci eget lacus tincidunt ullamcorper. Fusce semper congue condimentum. Aliquam ac sagittis nibh.
-        
-        Nullam lacinia aliquet eros. Aenean iaculis laoreet maximus. Nulla lacus nisl, tincidunt vitae nibh condimentum,
-        facilisis placerat urna. Quisque nec leo euismod, blandit risus ut, dignissim odio. Cras posuere mi vel congue feugiat.
-        Vestibulum at neque tincidunt, ornare dolor quis, mattis lorem. In hac habitasse platea dictumst. Nulla condimentum,
-        nisl non lacinia cursus, nibh dui fringilla ligula, nec vehicula magna eros id mi. Praesent vestibulum ligula non est
-        condimentum, a tincidunt velit tempus. Nam non justo vitae tortor suscipit venenatis bibendum et risus. Praesent mollis
-        commodo ligula, non fermentum felis gravida nec. Donec non aliquam odio.
-        
-        Duis finibus nec lorem et dictum. Duis aliquet ac neque vel accumsan. Nam viverra nunc vel vehicula facilisis. Donec
-        sagittis egestas aliquam. Sed pulvinar blandit massa a cursus. In tellus mauris, facilisis ac porta at, varius ac metus.
-        Sed aliquet volutpat urna, eget vestibulum mi consequat eu. Maecenas ante metus, bibendum in odio semper, luctus
-        molestie magna.
-        
-        In eget neque sapien. Aliquam erat volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Etiam euismod ex eu sodales aliquet. Maecenas tincidunt, tellus non fermentum vestibulum, mi felis
-        sollicitudin odio, non pellentesque ligula nisi eget dui. Cras luctus est vitae nisl fringilla, eu varius dui
-        vestibulum. Nullam ut faucibus nisi, vel rutrum nulla. Maecenas iaculis egestas tellus vitae blandit. Mauris eget mi et
-        elit rutrum consequat.
-        
-        Nunc imperdiet quis nisi eget egestas. Etiam convallis vestibulum tortor mattis gravida. Pellentesque vel mauris
-        sollicitudin, blandit urna non, finibus nunc. Nunc varius vel lectus a mollis. Integer pellentesque porta tortor in
-        mattis. Duis imperdiet ex eget diam pulvinar porta. Donec auctor nisl sed tincidunt viverra. Sed placerat est nec elit
-        ornare, at ultrices ante laoreet. Nam euismod sapien a ornare condimentum. Etiam auctor euismod risus, eu pretium sapien
-        viverra vel. Praesent sodales posuere justo quis laoreet. Proin posuere malesuada magna et consectetur. Nam luctus
-        pulvinar pulvinar. Sed ornare, neque quis sodales sollicitudin, ante orci pharetra massa, non posuere justo nibh ac leo.
-    </div>
-    <div class='container' id="container">
-        <div id='project1' class='project1'><a href='Projects/project1.html'> <img src='Stickman.png' width='100%' height='100%'></a></div>
-        <div id='project1info' class='project1info'>Ultimately going to be a stickman game</div>
-        <div id='project2' class='project2'>Weather App</div>
-        <div id='project2info' class='project2info'>
-            <p>Weather forecast</p>
-             <input id='address' type='text' placeholder="type address">
-            <button id='addresssubmit'>Submit</button>
-        </div>
-        <div id='project3' class='project3'>Project3: Under Development</div>
-        <div id='project3info' class='project3info'>Project3 info: Expect Something Cool</div>
-        <div class='footer'>
-            <div id='footer1' class='footer1'>Contact</div>
-            <div id='footer1' class='footer1'><img id='gmail' src=''>
-                <a style="margin-left: -4px; padding-left: 0px;" class='navLink' href='mailto: jeremyb.stubbs@gmail.com'>
-                Email
-            </a></div>
-            <div id='footer1' class='footer1'>
-                <a style="margin-left: -4px; padding-left: 0px;" class='navLink' href='https://www.linkedin.com/in/jeremy-stubbs-a2b86191/'>
-                <img id='linkedin' src=''>
-                Linkedin
-            </a></div>
-        </div>
-    </div>
-    <div id='faded'></div>
-    <div id='workWrapper'></div>
-</br>
-</br>
-</br>
-</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
     </div>
 
+    <div id='info'>
+        <img id='portrait'
+            src='img/portrait.png'>
+        I like clean design with awesome functionality. My strengths are HTML5,Vanilla Javascript, React, Express, MongoDB, and Python. I am decent at CSS, Django, and Postgresql. In my spare time, I enjoy spending time with my son, reading, hiking and skiing. 
+    </div>
+    <h2 id ='my-projects'>My Projects</h2>
+    <div id='container' >
+        <div id='project1container'>
+            <div id='project1info' id='project1info'> Vanilla Javascript RPG Game: I did this as the final project of my General Assembly Course. I chose to do this to strengthen my OOP/DOM skills and to make something cool! There is no title, but you are a dwarf and the objective is to walk to the end of the level on the other side of the map. A goblin will randomly appear and attack you. Click on image to open. Note: only works in desktop.</div>
+            <div id='project1' ><a href='https://jeremystubbs.github.io/project4/'> <img src='img/game.png' width='100%' height='100%'></a></div>
+        </div>
+        <div id='project2container'>
+            <div id='project2info' id='project2info'>Spotify Clone: I built this project for the group project in the General Assembly course. This revolutionary (lol) music app will allow users to create playlists from randomly curated favorites by genre. The frontend was build in React. The backend was done in express and MongoDB and is hosted on Heroku. </div>
+            <div id='project2' id='project2'>
+                <a href='https://pages.git.generalassemb.ly/ingl3585/spotless_frontend/'><img src='img/spotless.png'/></a>
+                <!-- <p>Weather forecast</p>
+                <input id='address' type='text' placeholder="type address">
+                <button id='addresssubmit'>Submit</button> -->
+            </div>
+        </div>
+        <div id='project3container'>
+            <div id='project3info' id='project3info'>Project3 info: Expect Something Cool</div>
+            <div id='project3' id='project3'>Project3: Under Development</div>
+        </div>
+    </div>
+    <div id='footer'  >
+        <span>Contact</span>
+        <div><img id='gmail' src=''>
+            <a style="margin-left: -4px; padding-left: 0px;" id='footer-navLink' href='mailto: jeremyb.stubbs@gmail.com'>
+                Email
+            </a>
+        </div>
+        <div>
+            <a style="margin-left: -4px; padding-left: 0px;" id='footer-navLink' 
+                href='https://www.linkedin.com/in/jeremy-stubbs-a2b86191/'>
+                <img id='linkedin' src=''>
+                Linkedin
+            </a>
+        </div>
+        <div>
+            <a style="margin-left: -4px; padding-left: 0px;" id='footer-navLink'
+                href='https://github.com/JeremyStubbs'>
+                <img id='linkedin' src=''>
+                Github
+            </a>
+        </div>
+    </div>
+    <div id='ticker'></div>
+   
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src='js.js' type='text/Javascript'></script>
 </body>

@@ -18,11 +18,11 @@ const timer = (event) => {
 				1000 * 60 * minutes)) /
 			1000
 	);
-	$('#faded').text(
+	$('#ticker').text(
 		`This site is ${days} days, ${hours} hours ${minutes} minutes ${seconds} seconds old.`
 	);
 	setTimeout(timer, 1000);
-	console.log(counter);
+	// console.log(counter);
 };
 
 $(document).ready(function () {
@@ -32,7 +32,7 @@ $(document).ready(function () {
 //Code for weather API. Much more difficult than openweather api
 $('#addresssubmit').click(function () {
 	let address = $('#address').val();
-	console.log(address);
+	// console.log(address);
 	getWeather(address);
 });
 
@@ -44,7 +44,7 @@ const getWeather = async (element) => {
 			'&key=AIzaSyA5RQUnRrIYrBZA0RVKxWVwDWLi_QnUvoE';
 		const res = await fetch(url);
 		const data = await res.json();
-		console.log(data.results[0].geometry.location);
+		// console.log(data.results[0].geometry.location);
 		const url2 =
 			'https://api.weather.gov/points/' +
 			data.results[0].geometry.location.lat +
@@ -75,3 +75,61 @@ const getWeather = async (element) => {
 		console.error(err);
 	}
 };
+
+const element1 = document.getElementById('hamburger-content');
+// const element2 = document.getElementById('first-content');
+const element3 = document.getElementById('second-content');
+// const element4 = document.getElementById('third-content');
+
+function myFunction1() {
+	if (element1.style.display == '') {
+		element1.style.display = 'flex';
+	} else if (element1.style.display == 'flex') {
+		element1.style.display = '';
+	}
+}
+
+// function myFunction2() {
+// 	element3.style.display = '';
+// 	element4.style.display = '';
+// 	if (element2.style.display == 'flex') {
+// 		element2.style.display = '';
+// 	} else if (element2.style.display == '') {
+// 		element2.style.display = 'flex';
+// 	}
+// }
+
+function myFunction3() {
+	// element2.style.display = '';
+	// element4.style.display = '';
+	if (element3.style.display == 'flex') {
+		element3.style.display = '';
+	} else if (element3.style.display == '') {
+		element3.style.display = 'flex';
+	}
+}
+
+// function myFunction4() {
+// 	element3.style.display = '';
+// 	element2.style.display = '';
+// 	if (element4.style.display == 'flex') {
+// 		element4.style.display = '';
+// 	} else if (element4.style.display == '') {
+// 		element4.style.display = 'flex';
+// 	}
+// }
+
+function searchFunction() {
+	let input1 = document.getElementById('hamburger-search-field');
+	let input2 = document.getElementById('search-field');
+	if (window.innerWidth < 768) {
+		alert(`You typed ${input1.value}`);
+	} else {
+		alert(`You typed ${input2.value}`);
+	}
+}
+
+function scrollPageTo(input) {
+	let ele = document.getElementById(input).offsetTop;
+	window.scrollTo(0, ele - 200);
+}
