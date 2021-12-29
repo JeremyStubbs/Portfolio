@@ -216,15 +216,18 @@ header {
 #project1 img {
 	max-height: 300px;
 	width: auto;
+	border-radius: 50%;
 }
 
 #project2 img {
 	max-height: 300px;
 	width: auto;
+
 }
 #project3 img {
 	max-height: 300px;
 	width: auto;
+	border-radius: 50%;
 }
 
 #footer {
