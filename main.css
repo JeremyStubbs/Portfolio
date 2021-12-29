@@ -222,7 +222,6 @@ header {
 #project2 img {
 	max-height: 300px;
 	width: auto;
-
 }
 #project3 img {
 	max-height: 300px;
@@ -383,6 +382,10 @@ header {
 	}
 
 	#project2info {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	#project3info {
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
