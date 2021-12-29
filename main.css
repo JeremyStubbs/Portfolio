@@ -254,8 +254,11 @@ header {
 		height: 50px;
 		display: block;
 		margin-left: 45px;
-		position: relative;
+		/* position: relative; */
 		cursor: pointer;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 10px;
 	}
 
 	#hamburger-lines {
