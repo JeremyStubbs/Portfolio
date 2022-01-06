@@ -76,48 +76,15 @@ const getWeather = async (element) => {
 	}
 };
 
-const element1 = document.getElementById('hamburger-content');
-// const element2 = document.getElementById('first-content');
-const element3 = document.getElementById('second-content');
-// const element4 = document.getElementById('third-content');
-
-function myFunction1() {
+//Display hamburger
+function myFunction(element) {
+	const element1 = document.getElementById(element);
 	if (element1.style.display == '') {
 		element1.style.display = 'flex';
 	} else if (element1.style.display == 'flex') {
 		element1.style.display = '';
 	}
 }
-
-// function myFunction2() {
-// 	element3.style.display = '';
-// 	element4.style.display = '';
-// 	if (element2.style.display == 'flex') {
-// 		element2.style.display = '';
-// 	} else if (element2.style.display == '') {
-// 		element2.style.display = 'flex';
-// 	}
-// }
-
-function myFunction3() {
-	// element2.style.display = '';
-	// element4.style.display = '';
-	if (element3.style.display == 'flex') {
-		element3.style.display = '';
-	} else if (element3.style.display == '') {
-		element3.style.display = 'flex';
-	}
-}
-
-// function myFunction4() {
-// 	element3.style.display = '';
-// 	element2.style.display = '';
-// 	if (element4.style.display == 'flex') {
-// 		element4.style.display = '';
-// 	} else if (element4.style.display == '') {
-// 		element4.style.display = 'flex';
-// 	}
-// }
 
 function searchFunction() {
 	let input1 = document.getElementById('hamburger-search-field');
