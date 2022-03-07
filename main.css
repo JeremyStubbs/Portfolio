@@ -155,7 +155,9 @@ header {
 }
 
 #navbar2wrapper:hover #dropdown-content2 {
-	display: inline-block;
+	display: block;
+	width: 100%;
+	transform: translate(-25%);
 }
 
 #dropdown-content2 div {
@@ -223,11 +225,11 @@ header {
 	max-height: 300px;
 	width: auto;
 }
-#project3 img {
+/* #project3 img {
 	max-height: 300px;
 	width: auto;
 	border-radius: 50%;
-}
+} */
 
 #footer {
 	text-align: left;
@@ -388,10 +390,10 @@ header {
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
-	#project3info {
+	/* #project3info {
 		margin-top: 10px;
 		margin-bottom: 10px;
-	}
+	} */
 }
 
 @media screen and (min-width: 768px) {
@@ -400,7 +402,7 @@ header {
 		object-fit: cover;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
 		margin: 20px;
 		grid-gap: 20px;
 	}
@@ -425,8 +427,9 @@ header {
 		grid-column: 2/3;
 		grid-row: 1/2;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		flex-direction: column;
+		justify-content: left;
+		align-items: left;
 	}
 
 	#project2container {
@@ -448,11 +451,12 @@ header {
 		grid-column: 2/3;
 		grid-row: 1/2;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		flex-direction: column;
+		justify-content: left;
+		align-items: left;
 	}
 
-	#project3container {
+	/* #project3container {
 		border: solid grey;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -474,5 +478,5 @@ header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-}
+	}*/
+} 

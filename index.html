@@ -20,11 +20,6 @@
         </div>
         <div id='hamburger-content'>
             <div id='first' onclick="scrollPageTo('info')">About Me
-                <!-- <div id='first-content'>
-                    <div id=''>Drama</div>
-                    <div id=''>Horror</div>
-                    <div id=''>Romance</div>
-                </div> -->
             </div>                
             <div id='second' onclick="myFunction('second-content')">My Projects
                 <div id ='second-content'>
@@ -34,11 +29,6 @@
                 </div>
             </div>                
             <div id='third' onclick="scrollPageTo('footer')">Contact
-                <!-- <div id='third-content'>
-                    <div id=''>Adventure</div>
-                    <div id=''>Fantasy</div>
-                    <div id=''>Young Adults</div>
-                </div> -->
             </div>
         </div>
         <div id='hamburger-search'>
@@ -52,39 +42,17 @@
     <div id='navbar'>
         <div id='navbar1wrapper'>
             <div onclick="scrollPageTo('info')">About Me</div>
-            <!-- <div id='dropdown-content1'>
-                <div >
-                    <div>Drama</div>
-                </div>
-                <div >
-                    <div>Horror</div>
-                </div>
-                <div >
-                    <div>Romance</div>
-                </div>
-            </div> -->
         </div>
         <div id='navbar2wrapper'>
             My Projects
             <div id='dropdown-content2'>
                 <div onclick="scrollPageTo('project1')">Javascript Game</div>
                 <div onclick="scrollPageTo('project2')">Spotify Clone</div>
-                <div onclick="scrollPageTo('project3')">Book Club</div>
+                <!-- <div onclick="scrollPageTo('project3')">Book Club</div> -->
             </div>
         </div>
         <div id='navbar3wrapper'>
             <div onclick="scrollPageTo('footer')">Contact</div>
-            <!-- <div id='dropdown-content3'>
-                <div >
-                    <div>Adventure</div>
-                </div>
-                <div >
-                    <div>Fantasy</div>
-                </div>
-                <div >
-                    <div>Young Adults</div>
-                </div>
-            </div> -->
         </div>
         <div id='search-div'>
             <input id='search-field' type='text' placeholder='Search'
@@ -101,23 +69,28 @@
     <h2 id ='my-projects'>My Projects</h2>
     <div id='container' >
         <div id='project1container'>
-            <div id='project1info' id='project1info'> Vanilla Javascript RPG Game: I did this as the final project of my General Assembly Course. I chose to do this to strengthen my OOP/DOM skills and to make something cool! There is no title, but you are a dwarf and the objective is to walk to the end of the level on the other side of the map. A goblin will randomly appear and attack you. Click on image to open. Note: only works in desktop.</div>
+            <div id='project1info' id='project1info'> Vanilla Javascript RPG Game: I did this as the final project of my General Assembly Course. I chose to do this to strengthen my OOP/DOM skills and to make something cool! There is no title, but you are a dwarf and the objective is to walk to the end of the level on the other side of the map. A goblin will randomly appear and attack you. Click on image to open. Note: only works in desktop. 
+                <a href="https://jeremystubbs.github.io/project4/ "> Deployed Link </a>
+                <a href ="https://github.com/JeremyStubbs/project4"> Repo</a>
+            </div>
             <div id='project1' ><a href='https://jeremystubbs.github.io/project4/'> <img src='img/game.png' width='100%' height='100%'></a></div>
         </div>
         <div id='project2container'>
-            <div id='project2info' id='project2info'>Spotify Clone: I built this project for the group project in the General Assembly course. This revolutionary (lol) music app will allow users to create playlists from randomly curated favorites by genre. The frontend was build in React. The backend was done in express and MongoDB and is hosted on Heroku. </div>
+            <div id='project2info' id='project2info'>Spotify Clone: The frontend was build in React. The backend was done in express and MongoDB and is hosted on Heroku. I am in the process of moving the backend to AWS dynamo which will be accessed with a lambda function. 
+                <a href="https://pages.git.generalassemb.ly/ingl3585/spotless_frontend/"> Deployed Link </a>
+                <a href="https://github.com/JeremyStubbs/spotless_backend "> Backend repo</a>
+                <a href="https://github.com/JeremyStubbs/spotless_frontend"> Frontend repo </a>
+                <a href="https://github.com/JeremyStubbs/Spotless_AWS "> AWS repo </a>
+            </div>
             <div id='project2' id='project2'>
                 <a href='https://pages.git.generalassemb.ly/ingl3585/spotless_frontend/'><img src='img/spotless.png'/></a>
-                <!-- <p>Weather forecast</p>
-                <input id='address' type='text' placeholder="type address">
-                <button id='addresssubmit'>Submit</button> -->
             </div>
         </div>
 
-        <div id='project3container'>
+        <!-- <div id='project3container'>
             <div id='project3info' id='project3info'>A basic React app that uses a google books api. The idea is a blog for book recommendations, with the option to buy the books. The search function works, but you have to type the exact name of the book. It was my first React project, and I learned a lot about the async idiosyncracies of React from it. </div>
             <div id='project3' id='project3'><a href='https://jeremystubbs.github.io/Project2/'><img src='img/logo.png' /></a></div>
-        </div>
+        </div> -->
     </div>
     <div id='footer'  >
         <span>Contact</span>
