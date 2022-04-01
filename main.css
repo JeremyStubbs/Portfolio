@@ -1,3 +1,4 @@
+/*        Desktop Size           */
 body {
 	width: 100vw;
 	height: auto;
@@ -49,7 +50,7 @@ header {
 	min-height: 100px;
 }
 
-/*/////////////*/
+/*///////      NAVBAR       //////*/
 #navbar {
 	display: flex;
 	justify-content: space-around;
@@ -72,7 +73,7 @@ header {
 	text-decoration: none;
 }
 
-/*/////////////*/
+
 
 #search-div {
 	display: flex;
@@ -93,7 +94,7 @@ header {
 	border: solid black;
 	outline: none;
 }
-/* ////////// */
+
 
 #navbar1wrapper {
 	position: relative;
@@ -106,32 +107,6 @@ header {
 	color: white;
 	border-radius: 20px;
 }
-
-#dropdown-content1 {
-	display: none;
-	position: absolute;
-	background-color: gray;
-	top: 40px;
-	box-shadow: 0px 8px 16px 0px;
-	z-index: 1;
-}
-
-#navbar1wrapper:hover #dropdown-content1 {
-	display: inline-block;
-}
-
-#dropdown-content1 div {
-	color: white;
-	/* padding: 12px 16px; */
-	text-decoration: none;
-	display: block;
-}
-
-#dropdown-content1 div:hover {
-	background-color: #ddd;
-}
-
-/*/////////////*/
 
 #navbar2wrapper {
 	position: relative;
@@ -171,7 +146,6 @@ header {
 	background-color: #ddd;
 }
 
-/*/////////////*/
 
 #navbar3wrapper {
 	position: relative;
@@ -185,52 +159,71 @@ header {
 	border-radius: 20px;
 }
 
-#dropdown-content3 {
-	display: none;
-	position: absolute;
-	background-color: gray;
-	top: 40px;
-	box-shadow: 0px 8px 16px 0px;
-	z-index: 1;
-}
 
-#navbar3wrapper:hover #dropdown-content3 {
-	display: inline-block;
-}
-
-#dropdown-content3 div {
-	color: white;
-	/* padding: 12px 16px; */
-	text-decoration: none;
-	display: block;
-}
-
-#dropdown-content3 div:hover {
-	background-color: #ddd;
-}
-
-/* //////// */
+/* ////   My Projects   //// */
 
 #my-projects {
 	margin: 20px;
 }
 
+#container {
+	text-align: left;
+	object-fit: cover;
+	display: block;
+	margin: 20px;
+}
+
+#projectcontainer {
+	border: solid grey;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	padding: 10px;
+}
+
+#simpleprojectcontainer {
+	border: solid grey;
+	display: block;
+	padding: 10px;
+}
+
+#simpleprojectcontainer span{
+	font-size: 18px;
+	font-weight: bolder;
+}
+
 #project1 img {
 	max-height: 300px;
+	grid-column: 1/2;
 	width: auto;
-	border-radius: 50%;
 }
+
+#project1info {
+	padding: 20px;
+	grid-column: 2/4;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	align-items: left;
+}
+
 
 #project2 img {
 	max-height: 300px;
+	grid-column: 1/2;
 	width: auto;
 }
-/* #project3 img {
-	max-height: 300px;
-	width: auto;
-	border-radius: 50%;
-} */
 
+#project2info {
+	padding: 20px;
+	grid-column: 2/4;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	align-items: left;
+}
+
+
+/*          Footer             */
 #footer {
 	text-align: left;
 	border: solid black;
@@ -247,6 +240,7 @@ header {
 	margin: 20px;
 }
 
+/*      Smart Phone Sized Screen     */
 @media screen and (max-width: 768px) {
 	#navbar {
 		display: none;
@@ -396,87 +390,3 @@ header {
 	} */
 }
 
-@media screen and (min-width: 768px) {
-	#container {
-		text-align: left;
-		object-fit: cover;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-		margin: 20px;
-		grid-gap: 20px;
-	}
-
-	#project1container {
-		border: solid grey;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
-		grid-column: 1/4;
-		grid-row: 1/2;
-		padding: 10px;
-	}
-
-	#project1 {
-		grid-column: 1/2;
-		grid-row: 1/2;
-	}
-
-	#project1info {
-		padding: 20px;
-		grid-column: 2/3;
-		grid-row: 1/2;
-		display: flex;
-		flex-direction: column;
-		justify-content: left;
-		align-items: left;
-	}
-
-	#project2container {
-		border: solid grey;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
-		grid-column: 1/4;
-		grid-row: 2/3;
-		padding: 10px;
-	}
-	#project2 {
-		grid-column: 1/2;
-		grid-row: 1/2;
-	}
-
-	#project2info {
-		padding: 20px;
-		grid-column: 2/3;
-		grid-row: 1/2;
-		display: flex;
-		flex-direction: column;
-		justify-content: left;
-		align-items: left;
-	}
-
-	/* #project3container {
-		border: solid grey;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
-		grid-column: 1/4;
-		grid-row: 3/4;
-		padding: 10px;
-	}
-
-	#project3 {
-		grid-column: 1/2;
-		grid-row: 1/2;
-	}
-
-	#project3info {
-		padding: 20px;
-		grid-column: 2/3;
-		grid-row: 1/2;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}*/
-} 
