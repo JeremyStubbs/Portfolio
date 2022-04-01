@@ -23,12 +23,10 @@
             </div>                
             <div id='second' onclick="myFunction('second-content')">My Projects
                 <div id ='second-content'>
-                    <div onclick="scrollPageTo('project1')">Spotless Clone</div>
-                    <div onclick="scrollPageTo('project2')">Javascript Game</div>
-                    <div onclick="scrollPageTo('project2')">Python</div>
-                    <div onclick="scrollPageTo('project2')">DevOps (Node, Cloud Deployment)</div>
-                    <div onclick="scrollPageTo('project2')">Machine Learning/Neural Networks</div>
-                    <div onclick="scrollPageTo('project2')">Algorithms</div>
+                    <div onclick="scrollPageTo('webdevelopment')">Web Development</div>
+                    <div onclick="scrollPageTo('machinelearning')">Machine Learning/Neural Networks</div>
+                    <div onclick="scrollPageTo('generalpython')">Python</div>
+                    <div onclick="scrollPageTo('algorithms')">Algorithms</div>
                 </div>
             </div>                
             <div id='third' onclick="scrollPageTo('footer')">Contact
@@ -49,12 +47,10 @@
         <div id='navbar2wrapper'>
             My Projects
             <div id='dropdown-content2'>
-                <div onclick="scrollPageTo('project1')">Spotless Clone</div>
-                <div onclick="scrollPageTo('project2')">Javascript Game</div>
-                <div onclick="scrollPageTo('project2')">Python</div>
-                <div onclick="scrollPageTo('project2')">DevOps (Node, Cloud Deployment)</div>
-                <div onclick="scrollPageTo('project2')">Machine Learning/Neural Networks</div>
-                <div onclick="scrollPageTo('project2')">Algorithms</div>
+                <div onclick="scrollPageTo('webdevelopment')">Web Development</div>
+                <div onclick="scrollPageTo('machinelearning')">Machine Learning/Neural Networks</div>
+                <div onclick="scrollPageTo('generalpython')">Python</div>
+                <div onclick="scrollPageTo('algorithms')">Algorithms</div>
             </div>
         </div>
         <div id='navbar3wrapper'>
@@ -70,12 +66,13 @@
     <div id='info'>
         <img id='portrait'
             src='img/portrait.png'>
-            This is really a table of contents for my repositories. I am ok at CSS, decent at javascript and webdevops, & pretty good at python.
+            <p>This is really a table of contents for my repositories. I am ok at CSS, decent at javascript and webdevops, & pretty good at python.</p>
+            <p>About me: I have always wanted to invent or discover something. My primary interest after high school was biology and medicine so I earned degrees in bioengineering and worked for about a year in life sciences. When I finally got the chance, I jumped at the opportunity to study medicine. It was an eye-opening experience and I am grateful for it, but unfortunately it was not meant to be. Realizing that computer programming is central to any technology field, I have spent the last few years learning how to code. I have a broad set of skills now and would feel comfortable is many different industries. I am still trying to change the world, but in my spare time I like to hike and spend time with my son.</p>
     </div>
     <h1 id ='my-projects'>My Projects</h1>
     <div id='container' >
         <div id='simpleprojectcontainer'>
-            <h1>Web Development</h1>
+            <h1 id="webdevelopment">Web Development</h1>
         </div>
         <div id='projectcontainer'>
             <div id='project1' >
@@ -95,8 +92,7 @@
             </div>
             <div id='project2info' id='project2info'>
                 <h3>Vanilla Javascript RPG Game: </h3>
-                <p>I did this as the final project of my General Assembly Course. I chose to do this to strengthen my OOP/DOM skills and to make something cool! You are a dwarf and the objective is to walk to the end of the level on the other side of the map. A goblin will randomly appear and attack you. Click on image to open. Note: only works in desktop. </p>
-                <p>Some improvements that could be made are I could make the </p>
+                <p>I did this as the final project of my General Assembly Course before I knew about event streaming, websockets, server-side rendering, game frameworks, etc. I chose to do this to strengthen my OOP/DOM skills and to make something cool! You are a dwarf and the objective is to walk to the end of the level on the other side of the map. A goblin will randomly appear and attack you. Click on image to open. Note: only works in desktop. </p>
                 <a href="https://jeremystubbs.github.io/project4/ "> Deployed Link </a>
                 <a href ="https://github.com/JeremyStubbs/project4"> Repo</a>
             </div>
@@ -117,7 +113,7 @@
        
 
         <div id='simpleprojectcontainer'>
-            <h1>Machine Learning/Neural Networks</h1>
+            <h1 id="machinelearning">Machine Learning/Neural Networks</h1>
         </div>
         <div id='simpleprojectcontainer'>
             <div><span>Cats vs Dogs Neural Network: </span> neural network written in python uses the VGG16 tensorflow/keras algorithm to identify pictures of cats vs dogs.</div>
@@ -130,7 +126,7 @@
         
 
         <div id='simpleprojectcontainer'>
-            <h1>General Python Projects</h1>
+            <h1 id="generalpython">General Python Projects</h1>
         </div>
         <div id='simpleprojectcontainer'>
             <div ><span>Calculator</span> Simple Calculator App with PYQT6.</div>
@@ -149,13 +145,13 @@
             <a href="https://github.com/JeremyStubbs/weather_API">Repo</a>
         </div>
         <div id='simpleprojectcontainer'>
-            <div ><span>Git Unpacker:</span> Extract Data from Every Branch in Repo to a Separate Folders in a Directory</div>
+            <div ><span>Git Unpacker:</span> Extract Data from Every Branch in Repo to a Separate Folder</div>
             <a href="https://github.com/JeremyStubbs/git_unpacker">Repo</a>
         </div>
 
         
         <div id='simpleprojectcontainer'>
-            <h1>Algorithms</h1>
+            <h1 id="algorithms">Algorithms</h1>
         </div>
         <div id='simpleprojectcontainer'>
             <div><span>Fibonacci Numbers:</span> Find any Number of Fibonacci Sequence</div>
